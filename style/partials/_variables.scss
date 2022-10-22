@@ -1,0 +1,69 @@
+:root{
+    --color-primary: #adaf38;
+    --color-secondary: rgb(223, 61, 101);
+    --color-neutral: rgb(219, 219, 231);
+    --color-orange:#fb8f67;
+    --color-white: white;
+    --color-black: black;
+
+    --transition: all .4s ease-in-out;
+    --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3)
+}
+
+@mixin grid() {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+@mixin titleText($size: 2rem, $weight: normal, $transform: capitalize) {
+    color: var(--color-black);
+    padding: 1rem;
+    font: {
+      size: $size;
+      weight: $weight;
+    }
+    text: {
+      transform: $transform;
+      align: center;
+    }
+  }
+
+  // mixin for flex layout
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 1rem) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+  }
+
+  @mixin graphText($size: 1.6rem) {
+    color: var(--color-black);
+    padding: 1rem;
+    font-size: $size;
+    line-height: 1.5;
+    text: {
+      transform: capitalize;
+      align: left;
+    }
+  }
+
+  .buttonStyle {
+    padding: 0.5rem 2rem;
+    border: 0.2rem solid var(--color-orange);
+    border-radius: 50rem;
+    font-size: 2rem;
+    color: var(--color-orange);
+    cursor: pointer;
+    text-transform: capitalize;
+    background-color: transparent;
+    transition: var(--transition);
+  
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-orange);
+    }
+  }
