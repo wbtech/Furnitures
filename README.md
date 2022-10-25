@@ -1,1 +1,1 @@
-# Furniture Website
+# Furniture Landing Page
